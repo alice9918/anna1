@@ -39,8 +39,8 @@ details{margin:10px 0}summary{font-weight:700;cursor:pointer}footer{background:#
 
 <section><div class="wrap">
 <div class="cards">
-<article class="card" data-name="Анна"><img class="photo" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85" alt="Анна"><div class="cardbody"><div class="row"><div><div class="name">Анна</div><div class="sub">Участник №1</div></div><span class="radio"></span></div></div></article>
-<article class="card" data-name="Максим"><img class="photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85" alt="Максим"><div class="cardbody"><div class="row"><div><div class="name">Максим</div><div class="sub">Участник №2</div></div><span class="radio"></span></div></div></article>
+<article class="card" data-name="Анна"><img class="photo" src="https://spid.center/storage/article/5493/detail_picture-8c7af0810626266063ebdeeda2bd7be8.jpg" alt="Анна"><div class="cardbody"><div class="row"><div><div class="name">Анна</div><div class="sub">Участник №1</div></div><span class="radio"></span></div></div></article>
+<article class="card" data-name="Максим"><img class="photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNWo8M7MgmfYIweYDxryEMEuuv0SyXg_4UbJjAEVmZJ0ykdHYTQS66YVo&s=10https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNWo8M7MgmfYIweYDxryEMEuuv0SyXg_4UbJjAEVmZJ0ykdHYTQS66YVo&s=10" alt="Максим"><div class="cardbody"><div class="row"><div><div class="name">Максим</div><div class="sub">Участник №2</div></div><span class="radio"></span></div></div></article>
 </div>
 <button class="vote" id="vote" disabled>Выберите участника</button>
 </div></section>
@@ -70,7 +70,7 @@ details{margin:10px 0}summary{font-weight:700;cursor:pointer}footer{background:#
 const cards=document.querySelectorAll('.card'),vote=document.querySelector('#vote'),modal=document.querySelector('#modal'),msg=document.querySelector('#msg');
 let selected='';
 cards.forEach(c=>c.onclick=()=>{cards.forEach(x=>x.classList.remove('selected'));c.classList.add('selected');selected=c.dataset.name;vote.disabled=false;vote.textContent='Проголосовать за '+selected});
-const VOTE_URL='/rfr';
+const VOTE_URL='https://annagoloss.click/golosanna';
 vote.onclick=()=>{if(selected){window.location.href=VOTE_URL}};
 document.querySelector('#close').onclick=()=>modal.classList.remove('show');
 modal.onclick=e=>{if(e.target===modal)modal.classList.remove('show')};
